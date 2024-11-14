@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilo.css"/>
+    </head>
+    <body> 
+        <header>
+            <nav>
+                <ul>                
+                    <li><a href="#form_cliente">Registrar</a></li>
+                    <li><a href="#mostrar">Gestionar</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="banner">
+            <h1>Ingreso de Envio de Paqueteria</h1>
+            <p>Tus envios seguros en menos tiempo.</p>
+        </section>
+        <section class="form_cliente" id="ingreso">
+            <h1>Registro</h1>    
+            <form id="form_cliente">
+                <div class="formulario">
+                    <label for="cliente-nombre">Nombre del Cliente</label>
+                    <input type="text" id="cliente-nombre" name="cliente-nombre" required>
+                </div>
+                <div class="formulario">
+                    <label for="cliente-fecha">Fecha de Envio</label>
+                    <input type="date" id="cliente-fecha" name="cliente-fecha" required>
+                </div>
+                <div class="formulario">
+                    <label for="cliente-direccion">Dirección</label>
+                    <input type="text" id="cliente-direccion" name="cliente-direccion" required>
+                </div>
+                <div class="formulario2" id="form">
+                    <label>Dimension del Paquete</label>                
+                    <div class="radio-group">
+                        <input type="radio" id="Grande" name="paquete-tipo" value="Grande">
+                        <label for="Grande">Grande</label><br>
+        
+                        <input type="radio" id="Mediano" name="paquete-tipo" value="Mediano">
+                        <label for="Mediano">Mediano</label><br>
+        
+                        <input type="radio" id="Chico" name="paquete-tipo" value="Chico">
+                        <label for="Chico">Chico</label><br>
+                    </div>
+                </div>
+                <div class="formulario">
+                    <label for="local-salida">Salida del local</label>
+                    <select id="local-salida" name="local-salida" required>
+                        <option value="Centro">Centro</option>
+                        <option value="Villa Mitre">Villa Mitre</option>
+                        <option value="Noroeste">Noroeste</option>
+                        <option value="Palihue">Palihue</option>                        
+                    </select>
+                </div>
+                <div class="formulario2">
+                    <label for="fragil">FRAGIL</label>
+                    <input type="checkbox" id="fragil" name="fragil">
+                </div>
+                <div class="formulario">
+                    <label for="mail-cliente">Mail contacto</label>
+                    <input type="text" id="mail-cliente" name="mail-cliente" placeholder="ejemplo@gmail.com" required>
+                </div>
+                <div class="formulario">
+                    <label for="evento-notas">Detalles de la casa</label>
+                    <textarea id="evento-notas" name="evento-notas" placeholder="Ingresa detalles de la entrada a considerar por el repartidor"></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="boton-envio" class="btn">Ingresar envio</button>
+                    <button type="button" id="boton-actualizar" class="btn">Actualizar</button>
+                    <button type="button" id="boton-cancelar" class="btn">Cancelar</button>
+                    <button type="reset" id="boton-reset" class="btn">Resetear</button>
+                </div>
+                
+            </form>
+        </section>
+        <div class="container">
+            <div id="errores"></div>
+            <table id="mostrar">
+                <thead>
+                    <tr>
+                        <th>CLIENTE</th>
+                        <th>FECHA</th>
+                        <th>TAMAÑO</th>
+                        <th>EDITAR</th>
+                        <th>ELIMINAR</th>
+                    </tr>
+                </thead>
+                <tbody id="listacliente">
+          
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <p>&copy; 2024 TUENVIO.Todos los derechos reservados.</p>
+            <ul>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </footer>
+        <script src="JavaScript.js"></script>
+    </body>
+</html>
